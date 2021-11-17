@@ -1,0 +1,151 @@
+@charset "ISO-8859-1";
+
+*{
+	font-family: sans-serif;
+}
+
+table,td, th { border: 1px solid #3da9fc; }
+table { 
+border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+ }
+td, th { 
+		width: 100px;
+		height: 35px; 
+		}
+
+th { 
+	font-weight: bold; 
+	color:#fffffe; 
+    background-color: #094067;
+    }
+td { font-family: Arial;
+		 color:#094067;
+		 background-color: #ffffff; 
+		 padding-left: 10px;
+		 width: 90px;
+		 padding-left: 10px;
+		 width: 90px;
+		 text-align: center;
+		 }
+
+#link{
+		  background-color: #ffffff;
+		  margin: 2em;
+		  border: 1px solid #3da9fc;
+		  color: #00214d;
+		  padding: 1em 2em;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 1em;
+}
+#link:hover{
+		  background-color: #00ebc7;
+		  margin: 2em;
+		  border: 1px solid #3da9fc;
+		  color: #00214d;
+		  padding: 1em 2em;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 1em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #094067;
+  
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #00ebc7;
+  color: #094067;
+}
+.active {
+  color: #ffff;
+  background-color: #ff5470;
+}
+
+input, textarea, select, button {
+  width: 90%;
+  margin: 0;
+
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+  background   : rgba(0,0,0,.1);
+  border-radius: 5px;
+  outline      : none;
+}
+
+input, textarea,select,option {
+  font    : .9em/1.5em "handwriting", sans-serif;
+  border-radius: 4px;
+  border  :  1px solid 094067;
+  padding : 0 10px;
+  margin  : 0;
+  width   : 240px;
+
+  background: none;
+}
+
+input[type=number]{
+  width: 90%;
+  padding: 12px;
+  border:  1px solid 094067;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+input[type=text]{
+  width: 90%;
+  padding: 12px;
+  border:  1px solid 094067;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+
+input[type=submit] {
+  width: 40%;
+  background-color: #4CAF50;
+  color: white;
+  font-size: larger;
+  padding: 20px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
