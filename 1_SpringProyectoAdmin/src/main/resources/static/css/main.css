@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 26px;
+}
+
+table{
+  border-collapse: collapse;
+  border: none;
+}
+
+
+.logo{
+  border-radius: 50%;
+  border: 3px solid rgba(179,0,242,1);
+}
+
+
+
+.flexbox {
+  align-items: center;
+  display: flex;
+  height: 5em;
+  justify-content: center;
+  width: 5em;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+  color: darkblue;
+}
+
+#subti {
+  color: rgba(179,0,242,1);
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 26px;
+  opacity: 1;
+  text-align: center;
+}
+#titulo{
+  margin-bottom: 5%;
+  margin-left: 14%;
+}
+
+td{
+  padding: 10px 12px 5px;
+  border: 3px solid rgba(23,199,255,1);
+}
+.cabezeralogo{
+  margin-bottom: 5%;
+  width: 100%;
+}
+.cabezera:hover{
+  background-color: rgb(164, 255, 136);
+  color: white;
+}
+
+
+#lista{
+  margin-left:14%;
+  width: 100%;
+}
+
+#select{
+  background-color: rgba(23,199,255,1);
+}
+
+#desact{
+  margin: 0;
+  padding: 0;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 3px solid rgba(23,199,255,1);
+  border-left: 0px;
+}
+
+#nada{
+  border : none;
+  width: 20%;
+}
+#nadadet{
+  border : none;
+
+}
+#cablista{
+  background: rgb(112, 112, 112);
+  color: rgb(255, 255, 255);
+  border : none;
+}
+#tabla{
+  padding: 10px 12px 5px;
+  border: 1px solid rgb(0, 0, 0);
+  color:rgba(179,0,242,1);
+}
+.morado{
+  color: rgba(179,0,242,1);
+  text-decoration: none;
+}
+
+.tabladatos{
+  margin-left: 5%;
+}
+.tablalateral{
+  position: absolute;
+  top: 5%;
+  left: 60%;
+}
+
+.bordegris{
+  border: 2px solid rgb(119, 119, 119);
+}
+
+#imagen{
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%;
+  height: 150px;
+}
+
+img{
+  object-fit: contain;
+  width: 200px;
+  height: 150px;
+}
+
+.ui-helper-center {
+  text-align: center;
+}
