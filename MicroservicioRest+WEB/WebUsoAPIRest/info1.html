@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body onload=" cargarQuedan(),cargarEventosIndividual()">
+    <div class="info">
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      async function cargarEventosIndividual() {
+        var contenido = document.querySelector(".info");
+
+        axios
+          .get("http://localhost:4000/rest/eventos/verUno/1")
+          .then(function (response) {
+            // handle success
+            console.log(response.data);
+            let info = response.data;
+            console.log(contenido);
+            contenido.innerHTML +=`
+            <div class="card" style="width:90%">
+            <img src="https://picsum.photos/700/400" style="width:100%">
+                <div class="container">
+                    <h4><b>Id evento: ${info.idEvento}</b></h4>
+                    <p>Aforo Maximo:${info.aforoMaximo}</p>
+                    <h4>Descripcion: ${info.descripcion}</h4> 
+                    <p>Destacado: ${info.destacado}</p>
+                    <p>Direccion: ${info.direccion}</p>
+                    <p>Duracion: ${info.duracion}</p>
+                    <p>Estado: ${info.estado}</p>
+                    <p>Fecha: ${info.fechaInicio}</p>
+                    <p>Minimo Asistencia: ${info.minimoAsistencia}</p>
+                    <p>Nombre: ${info.nombre}</p>
+                    <p>Precio: ${info.precio}</p>
+                    <p>Tipo: ${info.tipo.descripcion}</p>
+                    <small>${info.tipo.nombre}</small>
+
+                    <a><button class="borrar" onclick="borrarEvento()">Borrar</button></a>
+                </div>
+            </div>
+            `
+          })
+          .catch(function (error) {
+            // handle error
+            console.log(error);
+          })
+          .then(function () {
+            // always executed
+          });
+      }
+      async function cargarQuedan() {
+        var contenido = document.querySelector(".info");
+
+        axios
+          .get("http://localhost:4000/rest/eventos/plazasQuedan/1")
+          .then(function (response) {
+            // handle success
+            console.log(response.data);
+            let info = response.data;
+            console.log(contenido);
+            contenido.innerHTML +=`
+            <div class="card" style="width:90%">
+                <div class="container">
+                    <h4><b>Plazas disponibles: ${info.plazas_quedan}</b></h4>
+                </div>
+            </div>
+            `
+          })
+          .catch(function (error) {
+            // handle error
+            console.log(error);
+          })
+          .then(function () {
+            // always executed
+          });
+      }
+      
+      function borrarEvento(){
+        axios
+          .delete("http://localhost:4000/rest/eventos/borrar/1")
+      }
+    </script>
+  </body>
+</html>
