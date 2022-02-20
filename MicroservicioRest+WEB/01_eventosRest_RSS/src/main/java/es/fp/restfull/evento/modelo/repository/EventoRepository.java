@@ -18,7 +18,7 @@ public interface EventoRepository extends JpaRepository<Evento, Integer>{
 	@Query("select e from Evento e where e.destacado = 'A'")//SELECT * FROM eventos_spring_boot.eventos where DESTACADO = 'A';
 	public List<Evento> buscarDestacados();
 	
-	@Query("select e from Evento e where e.nombre = ?1")//SELECT * FROM eventos_spring_boot.eventos where NOMBRE  LIKE '%Bod%';
+	@Query("select e from Evento e where e.nombre like %?1%")//SELECT * FROM eventos_spring_boot.eventos where NOMBRE  LIKE '%Bod%';
 	public List<Evento> buscarEvento(String dato);
 	
 }
